@@ -35,5 +35,5 @@ void Длина(int x1, int y1, int x2, int y2, int z1, int z2) // тут при
 Console.WriteLine($"расстояние между точками A и B:{Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2))}");
 }
 
-// вариант1();
-вариант2();
+вариант1();
+// вариант2();
