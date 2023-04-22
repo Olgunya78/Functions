@@ -1,6 +1,6 @@
-﻿//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними  в 3D пространстве.
+﻿//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-void вариант1()    /// вариант считает верно
+void variant1()    /// вариант считает верно
 {
 Random nam = new Random();
 int x1 = nam.Next(0, 100);
@@ -17,7 +17,7 @@ void Dist(int x1, int y1, int x2, int y2, int z1, int z2) // тут примен
 {
 Console.WriteLine($"расстояние между точками A и B:{Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2))}");
 }
-void вариант2()    /// вариант с диапазоном отрицательных чисел - считает верно
+void variant2()    /// вариант с диапазоном отрицательных чисел - считает верно
 {
 Random nam = new Random();
 int x1 = nam.Next(-100, 101);
@@ -34,6 +34,36 @@ void Длина(int x1, int y1, int x2, int y2, int z1, int z2) // тут при
 {
 Console.WriteLine($"расстояние между точками A и B:{Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2))}");
 }
-
-вариант1();
-// вариант2();
+void variant3()   //самый лучший код
+{
+  Random nam = new Random();
+  int a_x = nam.Next(0, 100);
+  int a_y = nam.Next(0, 100);
+  int a_z = nam.Next(0, 100);
+  int b_x = nam.Next(0, 100);
+  int b_y = nam.Next(0, 100);
+  int b_z = nam.Next(0, 100);
+  double reasult = Math.Sqrt(Math.Pow(a_x - b_x, 2) 
+                                + Math.Pow(a_x - b_x, 2) 
+                                + Math.Pow(a_y - b_y, 2) 
+                                + Math.Pow(a_z - b_z, 2));
+  Console.WriteLine($"расстояние между точками A и B: {reasult}");
+}
+void variant4()
+{
+  int a_x = 1;
+  int a_y = 1;
+  int a_z = 1;
+  int b_x = 0;
+  int b_y = 0;
+  int b_z = 0;
+  double reasult = Math.Sqrt(Math.Pow(a_x - b_x, 2) 
+                                + Math.Pow(a_x - b_x, 2) 
+                                + Math.Pow(a_y - b_y, 2) 
+                                + Math.Pow(a_z - b_z, 2));
+  Console.WriteLine(reasult);
+}
+// variant1();
+// variant2();
+variant3();
+// variant4();

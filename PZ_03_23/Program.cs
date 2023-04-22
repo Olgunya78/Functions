@@ -49,8 +49,26 @@ for (int i = 1; i <= num; i++)
   Console.WriteLine("{0} \t {1} \t", i, Math.Pow((i),3));
 }
 }
-
+void вариант5()  // самый лучший вариант
+{
+  int number = 15;
+  for (int i = 1; i <= number; i++)
+  {
+    Console.WriteLine($"{i} * {i} * {i} = {Math.Pow(i, 3)}");
+  }
+}
+void вариант6()
+{
+Console.Write("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+  for (int i = 1; i <= n; i++)
+  {
+    Console.WriteLine($"{Math.Pow(i, 3)}");
+  }
+}
 // вариант1();
-// вариант2();
+вариант2();
 // вариант3();
-вариант4();
+// вариант4();
+// вариант5();
+// вариант6();
