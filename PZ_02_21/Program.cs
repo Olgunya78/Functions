@@ -63,7 +63,39 @@ void variant4()
                                 + Math.Pow(a_z - b_z, 2));
   Console.WriteLine(reasult);
 }
+void variant5() // не работает программа
+{
+  Console.Write("Введите координаты точки A: ");
+  double[] A = {Convert.ToInt32(Console.ReadLine()),
+                Convert.ToInt32(Console.ReadLine()),
+                Convert.ToInt32(Console.ReadLine())};
+  Console.Write("Введите координаты точки B: ");
+  double[] B = {Convert.ToInt32(Console.ReadLine()),
+                Convert.ToInt32(Console.ReadLine()),
+                Convert.ToInt32(Console.ReadLine())};
+  double x = B[0] - A[0];
+  double y = B[1] - A[1];
+  double z = B[2] - A[2];
+  Console.WriteLine($"Расстояние между точками A и B: {Math.Round(Math.Sqrt(Math.Pow(x,2) + Math.Pow(y,2) + Math.Pow(z,2)))}");
+}
+void variant6() // не работает программа
+{
+  int[] dis = new int[6];
+  for (int i = 0; i <= 8; i++)
+  {
+    if (i < 3 ) Console.Write("Введите координаты точки A: ");
+    else Console.Write("Введите координаты точки B: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    dis[i] = n;
+  }
+    double result = Math.Sqrt(Math.Pow((dis[3] - dis[0]),2)
+                            + Math.Pow((dis[4] - dis[1]),2) 
+                            + Math.Pow((dis[5] - dis[2]),2));
+  Console.WriteLine($"Расстояние между точками A и B: {Math.Round(result, 2)}");
+}
 // variant1();
 // variant2();
-variant3();
+// variant3();
 // variant4();
+// variant5();
+variant6();
